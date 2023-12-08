@@ -1,20 +1,35 @@
-// Entrada de dados
-let readlineSync = require('readline-sync');
+const readline = require("readline-sync");
 
-let nome = readlineSync.question("Qual o seu nome?\n");
-let nota1 = parseFloat(readlineSync.question("Informe a nota 1:\n"));
-let nota2 = parseFloat(readlineSync.question("Informe a nota 2:\n"));
+// Calculo de média de notas de um bimestre
 
-// Processamento
-nome = nome.toUpperCase();
+// ENTRADA
+// O usuário deve informar 4 notas 
 
-// Somar todas as notas
-let soma_notas = nota1 + nota2;
+const nota_prova_1 = readline.questionFloat("Qual a nota da prova 1?\t");
+const nota_prova_2 = readline.questionFloat("Qual a nota da prova 2?\t");
+const nota_prova_3 = readline.questionFloat("Qual a nota da prova 3?\t");
+const nota_prova_4 = readline.questionFloat("Qual a nota da prova 4?\t");
 
-// Dividir o valor da soma por 5
+console.log(nota_prova_1, nota_prova_2, nota_prova_3, nota_prova_4);
 
+// PROCESSAMENTO
 
-// Saída
-console.log(`OLÁ ${nome}`);
+// somar todas as notas e armazenar o valor em uma variável
+
+// Operadores aritméticos
+// Soma (+)
+// Subtração (-)
+// Divisão (/)
+// Multiplicação (*)
+
+const soma_notas = nota_prova_1 + nota_prova_2 + nota_prova_3 + nota_prova_4;
+
 console.log(soma_notas);
-// média final
+
+// calcular a média e armazenar em uma variável
+const media_notas = soma_notas / 4;
+
+// SAÍDA
+// Interpolação de texto
+
+console.log(`A média das notas é: ${media_notas}`);
